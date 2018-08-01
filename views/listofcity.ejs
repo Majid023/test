@@ -1,0 +1,18 @@
+
+<ul >
+<%cities.forEach(function(city){%>
+<li> <%=city.city%> <form action="/list/saved/" method="get"><input type="text" name="ud" required="required" placeholder="userId"/>
+ <input type="submit" value="like" />
+<input type="text" name="city" required placeholder="userId" value="<%=city.city%>"/>
+</form></li>
+<br>
+<%})%>
+</ul>
+
+
+<h5>find list of liked pages</h5>
+
+<form action="/list/likedlist/" method="post">
+    <input  name="r"type="text" required placeholder="userId"/>
+     <input type="submit" value="search" />
+</form>
